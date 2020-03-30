@@ -11,13 +11,14 @@ function LandingPage() {
         setMovies] = useState([])
     const [MainMovieImage,
         setMainMovieImage] = useState(null)
-    const [CurrentPage, setCurrentPage] = useState(0)
+    const [CurrentPage,
+        setCurrentPage] = useState(0)
 
     useEffect(() => {
         // 가장 인기 많은 영화 리스트 1페이지에 20씩 로딩
         const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
         fetchMovies(endpoint)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const fetchMovies = (endpoint) => {
@@ -25,18 +26,21 @@ function LandingPage() {
             .then(response => response.json())
             .then(response => {
                 console.log(response)
-                setMovies([...Movies, ...response.results])
+                setMovies([
+                    ...Movies,
+                    ...response.results
+                ])
                 setMainMovieImage(response.results[0])
                 setCurrentPage(response.page)
             })
     }
 
-    const loadMoreItems =() =>{
+    const loadMoreItems = () => {
 
         const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage + 1}`;
         fetchMovies(endpoint)
     }
-    
+
     return (
         <div style={{
             width: '100%',
@@ -60,6 +64,7 @@ function LandingPage() {
                     {Movies && Movies.map((movie, index) => (
                         <React.Fragment key={index}>
                             <GridCards
+                                landingPage
                                 image={movie.poster_path
                                 ? `${IMAGE_BASE_URL}w500${movie.poster_path}`
                                 : null}
