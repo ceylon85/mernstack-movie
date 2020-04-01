@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const favoriteSchema = mongoose.Schema({
-    useFrom: {
+    userFrom: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
@@ -18,9 +18,8 @@ const favoriteSchema = mongoose.Schema({
     movieRunTime: {
         type: String
     }
-}, { timestamps: true})
+}, { timestamps: true })
 
-   
 const Favorite = mongoose.model('Favorite', favoriteSchema);
 
 module.exports = { Favorite }
