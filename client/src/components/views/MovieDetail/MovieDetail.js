@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { List, Avatar, Row, Col, Button } from 'antd';
+import { Row, Button } from 'antd';
 import axios from 'axios';
-
+import '../FavoritePage/favorite.css';
 import Comments from './Sections/Comments'
 import LikeDislikes from './Sections/LikeDislikes';
 import { API_URL, API_KEY, IMAGE_BASE_URL, IMAGE_SIZE } from '../../Config'

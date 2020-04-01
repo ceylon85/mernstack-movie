@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './favorite.css';
 import Axios from 'axios';
-import { Popover } from 'antd';
+import { Popover, Button } from 'antd';
 import { IMAGE_BASE_URL } from '../../Config';
 
 function FavoritePage() {
@@ -68,7 +68,7 @@ function FavoritePage() {
             </Popover>
 
             <td>{favorite.movieRunTime} mins</td>
-            <td><button onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}>Remove</button></td>
+            <td><Button onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}>Remove</Button></td>
 
         </tr>
     })
@@ -85,7 +85,7 @@ function FavoritePage() {
                     <tr>
                         <th>Movie Title</th>
                         <th>Movie RunTime</th>
-                        <td>Remove from favorites</td>
+                        <th>Remove from favorites</th>
                     </tr>
                 </thead>
                 <tbody>
