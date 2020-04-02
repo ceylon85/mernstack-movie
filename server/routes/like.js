@@ -3,11 +3,6 @@ const router = express.Router();
 const {Like} = require("../models/Like");
 const {Dislike} = require("../models/Dislike");
 
-const {auth} = require("../middleware/auth");
-
-// =================================             Likes DisLikes
-// =================================
-
 router.post("/getLikes", (req, res) => {
 
     let variable = {}
