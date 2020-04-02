@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
-import {Button} from 'antd';
+import { Button } from 'antd';
 
 function Favorite(props) {
 
@@ -10,10 +10,9 @@ function Favorite(props) {
     const moviePost = props.movieInfo.backdrop_path
     const movieRunTime = props.movieInfo.runtime
 
-    const [FavoriteNumber,
-        setFavoriteNumber] = useState(0)
-    const [Favorited,
-        setFavorited] = useState(false)
+
+    const [FavoriteNumber, setFavoriteNumber] = useState(0)
+    const [Favorited, setFavorited] = useState(false)
     let variables = {
         userFrom: userFrom,
         movieId: movieId,
@@ -22,19 +21,21 @@ function Favorite(props) {
         movieRunTime: movieRunTime
     }
 
+
     useEffect(() => {
 
-        Axios
-            .post('/api/favorite/favoriteNumber', variables)
+
+        Axios.post('/api/favorite/favoriteNumber', variables)
             .then(response => {
                 setFavoriteNumber(response.data.favoriteNumber)
-                if (response.data.success) {} else {
+                if (response.data.success) {
+                } else {
                     alert('숫자 정보를 가져오는데 실패 했습니다.')
                 }
             })
 
-        Axios
-            .post('/api/favorite/favorited', variables)
+
+        Axios.post('/api/favorite/favorited', variables)
             .then(response => {
                 if (response.data.success) {
                     setFavorited(response.data.favorited)
@@ -43,13 +44,15 @@ function Favorite(props) {
                 }
             })
 
+
+
     }, [])
+
 
     const onClickFavorite = () => {
 
         if (Favorited) {
-            Axios
-                .post('/api/favorite/removeFromFavorite', variables)
+            Axios.post('/api/favorite/removeFromFavorite', variables)
                 .then(response => {
                     if (response.data.success) {
                         setFavoriteNumber(FavoriteNumber - 1)
@@ -59,9 +62,9 @@ function Favorite(props) {
                     }
                 })
 
+
         } else {
-            Axios
-                .post('/api/favorite/addToFavorite', variables)
+            Axios.post('/api/favorite/addToFavorite', variables)
                 .then(response => {
                     if (response.data.success) {
                         setFavoriteNumber(FavoriteNumber + 1)
@@ -75,12 +78,11 @@ function Favorite(props) {
 
     }
 
+
+
     return (
         <div>
-            <Button onClick={onClickFavorite}>{Favorited
-                    ? " Not Favorite"
-                    : "Add to Favorite "} {FavoriteNumber}
-            </Button>
+            <Button onClick={onClickFavorite}>{Favorited ? " Not Favorite" : "Add to Favorite "}  {FavoriteNumber}  </Button>
 
         </div>
     )
