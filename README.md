@@ -1,17 +1,26 @@
-Hello, My Friends  
-Thank you for Having interest in this repository ! 
+## `React Movie_app`
 
-To use this application, 
+### `Landign Page`  
+* `Template` 제작  
+* `Movie API` 사용 (`themoviedb API`)  
+* `Main Image Component` 생성
+* `Grid Card Component` 생성
+* `Load More`(더보기 버튼) 생성
+#### 시연영상
 
-1. make dev.js file inside config folder 
-2. put mongoDB info into dev.js file 
-3. Type  " npm install " inside the root directory  ( Download Server Dependencies ) 
-4. Type " npm install " inside the client directory ( Download Front-end Dependencies )
-
-
-If you have problem, feel free to ask me ^^ 
-
- You can watch the tutorial for this app.
-
-https://www.youtube.com/channel/UCFyXA9x8lpL3EYWeYhj4C4Q?view_as=subscriber
-## Movie_app
+### `Movie Detail Page`  
+* `MovieDetail/MovieDetail.js` 생성
+* `Template` 제작
+* `Crew Information` 가져오기(`toggle btn` 추가)
+* `Comment`/`Reple`/`Like`/`Dislike` 
+#### 시연영상
+  
+### `Favorite Feature`  
+* `Favorite Model` 생성
+* `Favorite Button UI` 생성
+* `MongoDB`와 연결 
+* `Favorite` 정보 받아오기(추가/제거 기능)
+### `Favorite Page`  
+* `Template` 생성
+* `MongoDB` 통해 영화 정보 가져오기
+#### 시연영상
