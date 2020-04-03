@@ -25,4 +25,5 @@
 ### `Favorite Page`  
 * `Template` 생성
 * `MongoDB` 통해 영화 정보 가져오기
-#### 시연영상
+#### 시연영상  
+![FavoritePage](https://user-images.githubusercontent.com/45006553/78347449-789c0580-75db-11ea-9653-1e70e2aad21e.gif)
