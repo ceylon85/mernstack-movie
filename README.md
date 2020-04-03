@@ -6,7 +6,8 @@
 * `Main Image Component` 생성
 * `Grid Card Component` 생성
 * `Load More`(더보기 버튼) 생성
-#### 시연영상
+#### 시연영상  
+![ezgif com-resize](https://user-images.githubusercontent.com/45006553/78344327-2fe24d80-75d7-11ea-8691-fd0a3473d9fe.gif)  
 
 ### `Movie Detail Page`  
 * `MovieDetail/MovieDetail.js` 생성
