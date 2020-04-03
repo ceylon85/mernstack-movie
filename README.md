@@ -15,6 +15,7 @@
 * `Crew Information` 가져오기(`toggle btn` 추가)
 * `Comment`/`Reple`/`Like`/`Dislike` 
 #### 시연영상  
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/45006553/78346635-42aa5180-75da-11ea-8234-07650161bdd3.gif)
 
 ### `Favorite Feature`  
 * `Favorite Model` 생성
